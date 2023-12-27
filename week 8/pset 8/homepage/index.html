@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <!-- As a link -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+    </nav>
+    <div style="text-align:center">
+        <h2>Image Gallery</h2>
+        <p>Click on the images below:</p>
+    </div>
+
+            <!-- The four columns -->
+    <div class="row">
+        <div class="column">
+            <img src="https://ap.uffizi.it/1688659635-1503909239806647-605174-2.jpg?auto=format&dpr=0.75&max-w=480000" alt="The Birth of Venus by Sandro Botticelli (1484-1486)" alt="Image of The Birth of Venus" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/The_Last_Supper_Leonardo_Da_Vinci_-_High_Resolution.jpg" alt="The Last Supper by Leonardo da Vinci (1495-1498)" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg" alt="The Creation of Adam by Michelangelo (1511-1512)" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="https://uploads4.wikiart.org/00142/images/vincent-van-gogh/the-starry-night.jpg!Large.jpg" alt="The Starry Night by Vincent van Gogh (1889)" style="width:100%" onclick="myFunction(this);">
+        </div>
+    </div>
+
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+   </script>
+
+</body>
+
+</html>
